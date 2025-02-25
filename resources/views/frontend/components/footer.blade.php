@@ -1,26 +1,9 @@
 <div id="footer">
-    <div class="w-100 float-start main-search">
-        <div class="container">
-            <div class="heading center-heading heading-white">
-                <h2>Subscribe <strong>With</strong> Us</h2>
-                <p>Crewneck Heather Grey Sweatshirt Made</p>
-            </div>
-            <div class="search-box">
-                <input type="text" name="search" placeholder="Enter Your Email">
-                <button type="button" class="main-btn main-btn-iocn">
-                    <span class="d-none-btn">Subscribe</span>
-                    <span class="icon">
-                        <i class="fas fa-paper-plane"></i>
-                    </span>
-                </button>
-            </div>
-        </div>
-    </div>
     <footer class="w-100 float-start">
         <div class="container">
-            <div class="">
+            <div class="footer-logo">
                 <a href="index.html">
-                    <img src="{{ asset('frontend/images/sai lanka bilss.svg') }}" class="img-fluid" alt="logo">
+                    <img src="{{ asset('frontend/images/sai lanka bilss.svg') }}" class="img-fluid footer-logo-size" alt="logo">
                 </a>
             </div>
             <div class="footer-content text-center">

@@ -7,7 +7,8 @@
                     <div class="col-lg-2 col-6 p-0">
                         <div class="main-header-logo">
                             <a href="index.html">
-                                <img src="{{ asset('frontend/images/sai lanka bilss 2.svg') }}" class="img-fluid logo-main" alt="logo">
+                                <img src="{{ asset('frontend/images/sai lanka bilss 2.svg') }}"
+                                    class="img-fluid logo-main" alt="logo">
                             </a>
                         </div>
                     </div>
