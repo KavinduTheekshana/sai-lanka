@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom.css') }}">
+        @vite(['', 'resources/js/app.js'])
 </head>
 
 <body>

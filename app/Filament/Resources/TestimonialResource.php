@@ -31,13 +31,11 @@ class TestimonialResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('location')
+                    ->maxLength(255),
                 Forms\Components\Textarea::make('content')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('position')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('company')
-                    ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->directory('testimonials')
@@ -59,11 +57,10 @@ class TestimonialResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('position')
+                Tables\Columns\TextColumn::make('location')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('company')
-                    ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('image')
+                    ->circular(), // Display image in a circular format,
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

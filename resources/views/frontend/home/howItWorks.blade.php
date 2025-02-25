@@ -5,89 +5,66 @@
             <div class="heart-line">
                 <i class="fas fa-heart"></i>
             </div>
-            <p>This theme extends default WordPress profiles. User can edit profile fields, upload photos, add
-                favorites,<br> view gifts and read messages, edit privacy settings without even seeing .</p>
+            <p>Finding your perfect match on Sai Lanka Bliss is easy and safe! Just follow these three simple steps</p>
         </div>
         <div class="w-100 float-start">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="counter-box">
                         <div class="counter-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24">
-                                <defs>
-                                    <linearGradient id="header-shape-gradient5" x1="17.5001" y1="32"
-                                        x2="17.5001" y2="2.9711">
-                                        <stop offset="0" stop-color="var(--color-stop)" />
-                                        <stop offset="1" stop-color="var(--color-bot)" />
-                                    </linearGradient>
-                                </defs>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M4.74949 15.1618C5.21238 15.4631 5.34343 16.0825 5.04219 16.5454C4.55617 17.2923 4.22492 18.1208 4.08106 19H6C6.55228 19 7 19.4477 7 20C7 20.5523 6.55228 21 6 21H3C2.44772 21 2 20.5523 2 20C2 18.3375 2.50107 16.7835 3.36589 15.4545C3.66714 14.9917 4.28659 14.8606 4.74949 15.1618ZM19.2505 15.1618C19.7134 14.8606 20.3329 14.9917 20.6341 15.4545C21.4989 16.7835 22 18.3375 22 20C22 20.5523 21.5523 21 21 21H18C17.4477 21 17 20.5523 17 20C17 19.4477 17.4477 19 18 19H19.9189C19.7751 18.1208 19.4438 17.2923 18.9578 16.5454C18.6566 16.0825 18.7876 15.4631 19.2505 15.1618Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 4C10.8954 4 10 4.89543 10 6C10 7.10457 10.8954 8 12 8C13.1046 8 14 7.10457 14 6C14 4.89543 13.1046 4 12 4ZM8 6C8 3.79086 9.79086 2 12 2C14.2091 2 16 3.79086 16 6C16 8.20914 14.2091 10 12 10C9.79086 10 8 8.20914 8 6Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M5.25033 12.3382C5.44015 12.1232 5.71317 12 6.00001 12H18C18.2868 12 18.5599 12.1232 18.7497 12.3382C18.9395 12.5532 19.0279 12.8394 18.9923 13.124L17.9923 21.124C17.9297 21.6245 17.5043 22 17 22H7.00001C6.49568 22 6.07028 21.6245 6.00773 21.124L5.00773 13.124C4.97215 12.8394 5.0605 12.5532 5.25033 12.3382ZM7.13279 14L7.88279 20H16.1172L16.8672 14H7.13279Z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M168,56a8,8,0,0,1,8-8h16V32a8,8,0,0,1,16,0V48h16a8,8,0,0,1,0,16H208V80a8,8,0,0,1-16,0V64H176A8,8,0,0,1,168,56Zm62.56,54.68a103.92,103.92,0,1,1-85.24-85.24,8,8,0,0,1-2.64,15.78A88.07,88.07,0,0,0,40,128a87.62,87.62,0,0,0,22.24,58.41A79.66,79.66,0,0,1,98.3,157.66a48,48,0,1,1,59.4,0,79.66,79.66,0,0,1,36.06,28.75A87.62,87.62,0,0,0,216,128a88.85,88.85,0,0,0-1.22-14.68,8,8,0,1,1,15.78-2.64ZM128,152a32,32,0,1,0-32-32A32,32,0,0,0,128,152Zm0,64a87.57,87.57,0,0,0,53.92-18.5,64,64,0,0,0-107.84,0A87.57,87.57,0,0,0,128,216Z">
+                                </path>
                             </svg>
                             <span>1</span>
                         </div>
                         <div class="counter-text">
-                            <h5>Tell us who you are!</h5>
-                            <span>Lorem ipsum dolor sit amet,<br> elit, sed do eiusmod.</span>
+                            <h5>Sign Up for Free</h5>
+                            <span>
+                                Create your account in minutes and verify your email to start your journey. <br> <br>
+                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="counter-box">
                         <div class="counter-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24">
-                                <defs>
-                                    <linearGradient id="header-shape-gradient6" x1="17.5001" y1="32"
-                                        x2="17.5001" y2="2.9711">
-                                        <stop offset="0" stop-color="var(--color-stop)" />
-                                        <stop offset="1" stop-color="var(--color-bot)" />
-                                    </linearGradient>
-                                </defs>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M4.74949 15.1618C5.21238 15.4631 5.34343 16.0825 5.04219 16.5454C4.55617 17.2923 4.22492 18.1208 4.08106 19H6C6.55228 19 7 19.4477 7 20C7 20.5523 6.55228 21 6 21H3C2.44772 21 2 20.5523 2 20C2 18.3375 2.50107 16.7835 3.36589 15.4545C3.66714 14.9917 4.28659 14.8606 4.74949 15.1618ZM19.2505 15.1618C19.7134 14.8606 20.3329 14.9917 20.6341 15.4545C21.4989 16.7835 22 18.3375 22 20C22 20.5523 21.5523 21 21 21H18C17.4477 21 17 20.5523 17 20C17 19.4477 17.4477 19 18 19H19.9189C19.7751 18.1208 19.4438 17.2923 18.9578 16.5454C18.6566 16.0825 18.7876 15.4631 19.2505 15.1618Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 4C10.8954 4 10 4.89543 10 6C10 7.10457 10.8954 8 12 8C13.1046 8 14 7.10457 14 6C14 4.89543 13.1046 4 12 4ZM8 6C8 3.79086 9.79086 2 12 2C14.2091 2 16 3.79086 16 6C16 8.20914 14.2091 10 12 10C9.79086 10 8 8.20914 8 6Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M5.25033 12.3382C5.44015 12.1232 5.71317 12 6.00001 12H18C18.2868 12 18.5599 12.1232 18.7497 12.3382C18.9395 12.5532 19.0279 12.8394 18.9923 13.124L17.9923 21.124C17.9297 21.6245 17.5043 22 17 22H7.00001C6.49568 22 6.07028 21.6245 6.00773 21.124L5.00773 13.124C4.97215 12.8394 5.0605 12.5532 5.25033 12.3382ZM7.13279 14L7.88279 20H16.1172L16.8672 14H7.13279Z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                                </path>
                             </svg>
                             <span>2</span>
                         </div>
                         <div class="counter-text">
-                            <h5>Find the right person</h5>
-                            <span>Lorem ipsum dolor sit amet,<br> elit, sed do eiusmod.</span>
+                            <h5>Browse & Discover</h5>
+                            <span>
+                                Explore profile photos, bios, and compatibility details, and save your favorite profiles
+                                to connect later.
+                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="counter-box">
                         <div class="counter-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24">
-                                <defs>
-                                    <linearGradient id="header-shape-gradient7" x1="17.5001" y1="32"
-                                        x2="17.5001" y2="2.9711">
-                                        <stop offset="0" stop-color="var(--color-stop)" />
-                                        <stop offset="1" stop-color="var(--color-bot)" />
-                                    </linearGradient>
-                                </defs>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M4.74949 15.1618C5.21238 15.4631 5.34343 16.0825 5.04219 16.5454C4.55617 17.2923 4.22492 18.1208 4.08106 19H6C6.55228 19 7 19.4477 7 20C7 20.5523 6.55228 21 6 21H3C2.44772 21 2 20.5523 2 20C2 18.3375 2.50107 16.7835 3.36589 15.4545C3.66714 14.9917 4.28659 14.8606 4.74949 15.1618ZM19.2505 15.1618C19.7134 14.8606 20.3329 14.9917 20.6341 15.4545C21.4989 16.7835 22 18.3375 22 20C22 20.5523 21.5523 21 21 21H18C17.4477 21 17 20.5523 17 20C17 19.4477 17.4477 19 18 19H19.9189C19.7751 18.1208 19.4438 17.2923 18.9578 16.5454C18.6566 16.0825 18.7876 15.4631 19.2505 15.1618Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12 4C10.8954 4 10 4.89543 10 6C10 7.10457 10.8954 8 12 8C13.1046 8 14 7.10457 14 6C14 4.89543 13.1046 4 12 4ZM8 6C8 3.79086 9.79086 2 12 2C14.2091 2 16 3.79086 16 6C16 8.20914 14.2091 10 12 10C9.79086 10 8 8.20914 8 6Z" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M5.25033 12.3382C5.44015 12.1232 5.71317 12 6.00001 12H18C18.2868 12 18.5599 12.1232 18.7497 12.3382C18.9395 12.5532 19.0279 12.8394 18.9923 13.124L17.9923 21.124C17.9297 21.6245 17.5043 22 17 22H7.00001C6.49568 22 6.07028 21.6245 6.00773 21.124L5.00773 13.124C4.97215 12.8394 5.0605 12.5532 5.25033 12.3382ZM7.13279 14L7.88279 20H16.1172L16.8672 14H7.13279Z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+                                viewBox="0 0 256 256">
+                                <path
+                                    d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                                </path>
                             </svg>
                             <span>3</span>
                         </div>
                         <div class="counter-text">
-                            <h5>Start Dating</h5>
-                            <span>Lorem ipsum dolor sit amet,<br> elit, sed do eiusmod.</span>
+                            <h5>Connect & Chat</h5>
+                            <span>
+                                Get to know each other through our safe, private chat system send a message or like to
+                                start a conversation.
+                            </span>
                         </div>
                     </div>
                 </div>

@@ -28,8 +28,8 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            // ->brandLogo(asset('frontend/images/sai lanka bilss.png'))
-            // ->darkModeBrandLogo(asset('frontend/images/sai lanka bilss.png'))
+            ->brandLogo(asset('frontend/images/sai lanka bilss.png'))
+            ->darkModeBrandLogo(asset('frontend/images/sai lanka bilss.png'))
             ->colors([
                 'primary' => Color::Rose,
             ])

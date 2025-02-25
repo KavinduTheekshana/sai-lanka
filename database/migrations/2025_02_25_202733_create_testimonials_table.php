@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('content');
-            $table->string('position')->nullable();
-            $table->string('company')->nullable();
+            $table->string('location')->nullable();
             $table->string('image')->nullable();
             $table->string('status')->default('draft'); // Add this line
             $table->timestamps();

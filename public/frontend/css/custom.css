@@ -10,3 +10,9 @@
     justify-content: center !important;
     width: 100% !important;
 }
+.testimonail-image{
+    width: 207px !important;
+    height: 207px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
