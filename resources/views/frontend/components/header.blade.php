@@ -25,17 +25,17 @@
                                     <input type="text" name="search" placeholder="Search....">
                                     <span><i class="fas fa-search"></i></span>
                                 </li>
-                                <li><a href="membership.html">Home</a></li>
+                                <li><a href="{{ route('/') }}">Home</a></li>
 
-                                <li><a href="membership.html">About</a></li>
-                                <li><a href="membership.html">Profiles</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Profiles</a></li>
 
-                                <li><a href="membership.html">Testimonial</a></li>
-
-
+                                <li><a href="#">Testimonial</a></li>
 
 
-                                <li><a href="contact.html">Contact</a></li>
+
+
+                                <li><a href="{{ route('contact') }}">Contact</a></li>
 
                                 <li class="d-block d-lg-none"><a href="login.html">Login / Register</a></li>
                                 <li class="d-none d-lg-block">
@@ -77,7 +77,8 @@
             <img src="{{ asset('frontend/images/banner-shape1.png') }}" alt="banner-shape1" class="img-fluid">
             <img src="{{ asset('frontend/images/banner-shape2.png') }}" alt="banner-shape2" class="img-fluid">
         </div>
-        {{-- <div class="shadow-img">
-        </div> --}}
+        @if (!Request::is('/'))
+            <div class="shadow-img"></div>
+        @endif
     </header>
 </div>

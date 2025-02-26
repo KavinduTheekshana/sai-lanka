@@ -15,4 +15,18 @@ class HomeController extends Controller
 
         return view('frontend.home.index', compact('testimonials'));
     }
+
+    public function contact()
+    {
+        return view('frontend.contact.index');
+    }
+
+    public function testimonial()
+    {
+        $testimonials = Testimonial::where('status', 'published')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('frontend.testimonial.index', compact('testimonials'));
+    }
 }

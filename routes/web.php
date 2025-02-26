@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('frontend.home.index');
 // });
 Route::get('/', [HomeController::class, 'index'])->name('/');
+Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('testimonial', [HomeController::class, 'testimonial'])->name('testimonial');
 
 Route::middleware([
     'auth:sanctum',
