@@ -21,6 +21,11 @@ class HomeController extends Controller
         return view('frontend.contact.index');
     }
 
+    public function about()
+    {
+        return view('frontend.about.index');
+    }
+
     public function testimonial()
     {
         $testimonials = Testimonial::where('status', 'published')

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('frontend.home.index');
 // });
 Route::get('/', [HomeController::class, 'index'])->name('/');
+Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('testimonial', [HomeController::class, 'testimonial'])->name('testimonial');
 
