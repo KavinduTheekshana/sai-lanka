@@ -30,7 +30,7 @@
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Profiles</a></li>
 
-                                <li><a href="#">Testimonial</a></li>
+                                <li><a href="{{ route('testimonial') }}">Testimonial</a></li>
 
 
 
