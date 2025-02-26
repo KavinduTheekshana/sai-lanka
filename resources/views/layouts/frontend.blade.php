@@ -24,12 +24,14 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/AnimTrap/css/animtrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom.css') }}">
-    @vite(['', 'resources/js/app.js'])
+    {{-- @vite(['', 'resources/js/app.js']) --}}
 </head>
 
 <body>
+    <a href="javascript:;" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    @include('frontend.components.header')
     @yield('content')
-
+    @include('frontend.components.footer')
     <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery-ui.min.js') }}"></script>
     <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>

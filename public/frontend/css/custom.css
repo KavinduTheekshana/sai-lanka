@@ -19,3 +19,6 @@
 .pb-100{
     padding-bottom: 100px !important;
 }
+.mh-400{
+    min-height: 400px !important;
+}
