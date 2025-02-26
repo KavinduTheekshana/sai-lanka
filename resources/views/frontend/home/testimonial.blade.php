@@ -1,14 +1,14 @@
 <div class="main-customers-slider w-100 float-start">
     <div class="container">
         <div class="heading center-heading">
-            <h2>Real <strong>Love Stories</strong>, Real Connections!</h2>
-            <div class="heart-line">
+            <h2 data-animscroll="fade-up" data-animscroll-delay="200">Real <strong>Love Stories</strong>, Real Connections!</h2>
+            <div class="heart-line" data-animscroll="fade-up" data-animscroll-delay="200">
                 <i class="fas fa-heart"></i>
             </div>
-            <p>Hear from happy couples who found love through Sai Lanka Bliss. Your perfect match could be just a message away!</p>
+            <p data-animscroll="fade-up" data-animscroll-delay="200">Hear from happy couples who found love through Sai Lanka Bliss. Your perfect match could be just a message away!</p>
         </div>
         <div class="customers-slider w-100 float-start">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel owl-theme" data-animscroll="fade-up" data-animscroll-delay="200">
                 @foreach ($testimonials as $testimonial)
                 <div class="item">
                     <div class="slider-box">

@@ -1,15 +1,15 @@
 <div class="how-it-work bg-color2 w-100 float-start">
     <div class="container">
         <div class="heading center-heading">
-            <h2>How <strong>It</strong> Works</h2>
-            <div class="heart-line">
+            <h2 data-animscroll="fade-up" data-animscroll-delay="200">How <strong>It</strong> Works</h2>
+            <div class="heart-line" data-animscroll="fade-up" data-animscroll-delay="200">
                 <i class="fas fa-heart"></i>
             </div>
-            <p>Finding your perfect match on Sai Lanka Bliss is easy and safe! Just follow these three simple steps</p>
+            <p data-animscroll="fade-up" data-animscroll-delay="200">Finding your perfect match on Sai Lanka Bliss is easy and safe! Just follow these three simple steps</p>
         </div>
         <div class="w-100 float-start">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12" data-animscroll="fade-up" data-animscroll-delay="200">
                     <div class="counter-box">
                         <div class="counter-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12" data-animscroll="fade-up" data-animscroll-delay="400">
                     <div class="counter-box">
                         <div class="counter-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12" data-animscroll="fade-up" data-animscroll-delay="600">
                     <div class="counter-box">
                         <div class="counter-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"

@@ -16,3 +16,6 @@
     border-radius: 50% !important;
     object-fit: cover !important;
 }
+.pb-100{
+    padding-bottom: 100px !important;
+}

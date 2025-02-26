@@ -22,8 +22,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/navigation.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/AnimTrap/css/animtrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom.css') }}">
-        @vite(['', 'resources/js/app.js'])
+    @vite(['', 'resources/js/app.js'])
 </head>
 
 <body>
@@ -45,6 +46,8 @@
     <script src="{{ asset('frontend/js/extensions/revolution.extension.navigation.min.js') }}"></script>
     <script src="{{ asset('frontend/js/extensions/revolution.extension.parallax.min.js') }}"></script>
     <script src="{{ asset('frontend/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+    <script src="{{ asset('frontend/AnimTrap/js/anim-effect.js') }}"></script>
+    <script src="{{ asset('frontend/AnimTrap/js/anim-scroll.js') }}"></script>
     <script src="{{ asset('frontend/js/custom.js') }}"></script>
     <script>
         var tpj = jQuery;
@@ -192,6 +195,12 @@
                     countUp();
                 }
             });
+        });
+    </script>
+
+    <script>
+        ANIMSCROLL.init({
+            easing: 'ease-in-out-sine'
         });
     </script>
 </body>

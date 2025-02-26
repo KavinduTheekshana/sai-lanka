@@ -12,19 +12,16 @@
                 </p>
                 <ul class="media-icon">
                     <li><a href="javascript:;"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="javascript:;"><i class="fab fa-google"></i></a></li>
-                    <li><a href="javascript:;"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="javascript:;"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="javascript:;"><i class="fab fa-skype"></i></a></li>
+                    <li><a href="javascript:;"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="javascript:;"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div>
             <div class="bootem-footer">
-                <p>© Copyright 2023 by <span>Fervor</span> - Design by <a href="https://webstrot.com/">Webstrot</a>.
+                <p>© Copyright {{ date('Y') }} by <span>Route One</span> - Design by <a href="https://codexer.co.uk">Codexer</a>.
                 </p>
                 <ul>
-                    <li><a href="community.html">Community</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Conatct Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Condetions</a></li>
                 </ul>
             </div>
         </div>
