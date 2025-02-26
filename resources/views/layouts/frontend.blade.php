@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Sai Lanka Bliss</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="description" content="fervor" />
-    <meta name="keywords" content="fervor" />
+    <meta name="description" content="Sai Lanka Bliss" />
+    <meta name="keywords" content="Sai Lanka Bliss" />
     <meta name="author" content="" />
     <meta name="MobileOptimized" content="320" />
     <link rel="icon" type="image/png" href="images/favicon.png">
