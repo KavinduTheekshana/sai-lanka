@@ -1,4 +1,57 @@
-<x-guest-layout>
+@extends('layouts.auth')
+
+@section('content')
+    <div class="container">
+        <div class="singin-box">
+            <div class="singin-left auth-bg">
+                <div class="logo">
+                    <img src="{{ asset('frontend/images/sai lanka bilss 2.svg') }}" alt="logo">
+                </div>
+
+                <a href="{{route("login")}}" class="tag">Log In</a>
+            </div>
+            <div class="singin-right">
+                <div class="main-form">
+                    <h4>Join Us Today! Create your account.</h4>
+                    <form action="{{ route('register') }}" method="POST">
+                        @csrf
+                        <div class="form-input">
+                            <input type="text" name="name" id="validationCustom01" placeholder="User name *"
+                                required="">
+                            <label for="validationCustom01"><i class="fas fa-user"></i></label>
+                        </div>
+                        <div class="form-input">
+                            <input type="email" name="email" id="validationCustom02" placeholder="Email Address *"
+                                required="">
+                            <label for="validationCustom02"><i class="fas fa-envelope"></i></label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" name="password" id="validationCustom04" placeholder="Password *"
+                                required="">
+                            <label for="validationCustom04"><i class="fas fa-lock"></i></label>
+                        </div>
+                        <div class="form-input">
+                            <input type="password" name="password_confirmation" id="validationCustom04" placeholder="Password Confirmation *"
+                                required="">
+                            <label for="validationCustom04"><i class="fas fa-lock"></i></label>
+                        </div>
+                        <div class="form-input-checkbox">
+                            <input type="checkbox" name="rememberme" id="rememberme">
+                            <label for="rememberme">Remember me</label>
+                            <a href="javascript:;">Forgot Password</a>
+                        </div>
+                        <div class="form-input">
+                            <button class="main-btn" type="submit">Sing Up</button>
+                        </div>
+                    </form>
+                    <p>Already A member? <a href="login.html">login</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+{{-- <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
@@ -57,4 +110,4 @@
             </div>
         </form>
     </x-authentication-card>
-</x-guest-layout>
+</x-guest-layout> --}}

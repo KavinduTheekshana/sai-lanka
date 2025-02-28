@@ -10,6 +10,7 @@
     <meta name="author" content="" />
     <meta name="MobileOptimized" content="320" />
     <link rel="icon" type="image/png" href="images/favicon.png">
+
     <link rel="stylesheet" href="{{ asset('frontend/css/fonts.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/animate.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/font-awesome.css') }}">
@@ -24,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/AnimTrap/css/animtrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom.css') }}">
-    {{-- @vite(['', 'resources/js/app.js']) --}}
+    @vite(['', 'resources/js/app.js'])
 </head>
 
 <body>

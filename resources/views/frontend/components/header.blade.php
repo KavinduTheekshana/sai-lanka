@@ -55,7 +55,7 @@
 
                             <div class="main-btn float-end d-none d-lg-block">
                                 <div class="menuBtn ">
-                                    <a href="login.html">Login</a> / <a href="sing-up.html">Register</a>
+                                    <a href="{{ route('login') }}">Login</a> / <a href="{{ route('register') }}">Register</a>
                                 </div>
                             </div>
                             <div class="mobToggle d-flex d-lg-none">

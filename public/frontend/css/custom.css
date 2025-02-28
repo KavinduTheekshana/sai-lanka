@@ -1,39 +1,44 @@
-.logo-main{
+.logo-main {
     width: 60% !important;
 }
-.footer-logo-size{
+.footer-logo-size {
     width: 300px !important;
 }
-.footer-logo{
+.footer-logo {
     margin-top: 30px !important;
     display: flex !important;
     justify-content: center !important;
     width: 100% !important;
 }
-.testimonail-image{
+.testimonail-image {
     width: 207px !important;
     height: 207px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
 }
-.pb-100{
+.pb-100 {
     padding-bottom: 100px !important;
 }
-.pb-50{
+.pb-50 {
     padding-bottom: 50px !important;
 }
-.mh-400{
+.mh-400 {
     min-height: 400px !important;
 }
-.testimonial-three-wrapper{
+.testimonial-three-wrapper {
     background-color: #ffffff !important;
 }
-.icon-color{
+.icon-color {
     color: #e60d4e !important;
 }
-.testimonial-image-inner{
+.testimonial-image-inner {
     width: 50px !important;
     height: 50px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
+}
+.auth-bg {
+    background-image: url("../../frontend/images/auth.webp") !important;
+    background-size: 100% auto; /* Full width, automatic height */
+    background-repeat: no-repeat;
 }
