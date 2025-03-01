@@ -55,7 +55,13 @@
 
                             <div class="main-btn float-end d-none d-lg-block">
                                 <div class="menuBtn ">
-                                    <a href="{{ route('login') }}">Login</a> / <a href="{{ route('register') }}">Register</a>
+                                    @if (Auth::check())
+                                        <a href="{{ route('dashboard') }}">Dashboard</a>
+                                    @else
+                                        <a href="{{ route('login') }}">Login</a> / <a
+                                            href="{{ route('register') }}">Register</a>
+                                    @endif
+
                                 </div>
                             </div>
                             <div class="mobToggle d-flex d-lg-none">
