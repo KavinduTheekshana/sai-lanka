@@ -54,13 +54,13 @@
                                             </button>
                                         </form>
                                         <!-- Display Images -->
-                                        <div id="image-container" style="margin-top: 10px; padding: 0; width:auto;">
+                                        <div id="image-container">
                                             <!-- Images will be loaded dynamically here -->
                                         </div>
 
 
                                         <!-- Progress Bar -->
-                                        <div id="progress-container" style="display: none; margin-top: 10px;">
+                                        <div id="progress-container">
                                             <progress id="progress-bar" value="0" max="100"></progress>
                                             <span id="progress-text">0%</span>
                                         </div>

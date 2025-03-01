@@ -6,7 +6,7 @@
                 <ul class="profile-setting">
                     <li><a href="{{ route('dashboard') }}" class="{{ request()->is('dashboard') ? 'active' : '' }}"><span><i
                                     class="fas fa-user-alt"></i></span> Profile Info</a></li>
-                    {{-- <li><a href="dashboard-notification.html"><span><i class="fas fa-bell"></i></span>
+                    <li><a href="dashboard-notification.html"><span><i class="fas fa-bell"></i></span>
                             Notifications Setting</a></li>
                     <li><a href="dashboard-connections-requests.html"><span><i
                                     class="fas fa-user-friends"></i></span> Connections Requests</a>
@@ -17,7 +17,7 @@
                                     class="fas fa-file-invoice-dollar"></i></span> Billing & Payout</a>
                     </li>
                     <li><a href="javascript:;"><span><i class="fas fa-history"></i></span> View purchase
-                            history</a></li> --}}
+                            history</a></li>
                     <li><a href="{{ route('logout') }}"><span><i class="fas fa-sign-out-alt"></i></span>
                             Logout</a></li>
                 </ul>
