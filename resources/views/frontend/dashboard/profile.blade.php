@@ -32,6 +32,49 @@
                             @endif
 
                         </div>
+
+                            <div class="input-info-box">
+                                <div class="header">
+                                    Upload Your Photos
+                                </div>
+                                <div class="content">
+                                    <div class="row">
+                                        <!-- Upload Form -->
+                                        <form id="upload-form" enctype="multipart/form-data">
+                                            <input type="file" id="file-input" name="image" accept="image/*"
+                                                style="display: none;">
+
+                                            <button type="button" id="upload-btn" class="upload-btn">
+                                                <div class="upload-btn-wrapper">
+                                                    <div class="upload-btn-content">
+                                                        <i class="fas fa-camera"></i>
+                                                        <p>Add a photo</p>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </form>
+                                        <!-- Display Images -->
+                                        <div id="image-container" style="margin-top: 10px; padding: 0; width:auto;">
+                                            <!-- Images will be loaded dynamically here -->
+                                        </div>
+
+
+                                        <!-- Progress Bar -->
+                                        <div id="progress-container" style="display: none; margin-top: 10px;">
+                                            <progress id="progress-bar" value="0" max="100"></progress>
+                                            <span id="progress-text">0%</span>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        <hr>
+
                         <form action="{{ route('profile.store') }}" method="POST">
                             @csrf
                             <div class="input-info-box">
@@ -68,7 +111,9 @@
                                                 <div class="custum-select">
                                                     <select name="country">
                                                         <option value="N/A">Select Country</option>
-                                                        <option value="Sri Lanka" {{ (old('country', $profile->country ?? '') == 'Sri Lanka') ? 'selected' : '' }}>Sri Lanka</option>
+                                                        <option value="Sri Lanka"
+                                                            {{ old('country', $profile->country ?? '') == 'Sri Lanka' ? 'selected' : '' }}>
+                                                            Sri Lanka</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -83,7 +128,8 @@
                                         <div class="col-md-6">
                                             <div class="my-input-box">
                                                 <label>Birthday</label>
-                                                <input type="date" name="birthday" value="{{ old('birthday', $profile->birthday ?? '') }}">
+                                                <input type="date" name="birthday"
+                                                    value="{{ old('birthday', $profile->birthday ?? '') }}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -98,9 +144,15 @@
                                                 <label>Status</label>
                                                 <div class="custum-select">
                                                     <select name="status">
-                                                        <option value="Single" {{ (old('status', $profile->status ?? '') == 'Single') ? 'selected' : '' }}>Single</option>
-                                                        <option value="In a Relationship" {{ (old('status', $profile->status ?? '') == 'In a Relationship') ? 'selected' : '' }}>In a Relationship</option>
-                                                        <option value="Married" {{ (old('status', $profile->status ?? '') == 'Married') ? 'selected' : '' }}>Married</option>
+                                                        <option value="Single"
+                                                            {{ old('status', $profile->status ?? '') == 'Single' ? 'selected' : '' }}>
+                                                            Single</option>
+                                                        <option value="In a Relationship"
+                                                            {{ old('status', $profile->status ?? '') == 'In a Relationship' ? 'selected' : '' }}>
+                                                            In a Relationship</option>
+                                                        <option value="Married"
+                                                            {{ old('status', $profile->status ?? '') == 'Married' ? 'selected' : '' }}>
+                                                            Married</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -198,3 +250,106 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        document.getElementById('upload-btn').addEventListener('click', function() {
+            document.getElementById('file-input').click();
+        });
+
+        document.getElementById('file-input').addEventListener('change', function(event) {
+            let file = event.target.files[0];
+            if (file) {
+                uploadFile(file);
+            }
+        });
+
+        function uploadFile(file) {
+            let formData = new FormData();
+            formData.append('image', file);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '/upload-photo', true);
+            xhr.setRequestHeader('X-CSRF-TOKEN', document.querySelector('meta[name="csrf-token"]').getAttribute('content'));
+
+            xhr.upload.onprogress = function(event) {
+                let percent = Math.round((event.loaded / event.total) * 100);
+                document.getElementById('progress-container').style.display = 'block';
+                document.getElementById('progress-bar').value = percent;
+                document.getElementById('progress-text').innerText = percent + '%';
+            };
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    document.getElementById('progress-container').style.display = 'none';
+                    loadImages(); // Reload images after upload
+                } else {
+                    alert('Upload failed.');
+                }
+            };
+
+            xhr.send(formData);
+        }
+
+        function loadImages() {
+    fetch('/get-photos')
+        .then(response => response.json())
+        .then(data => {
+            let container = document.getElementById('image-container');
+            container.innerHTML = ''; // Clear previous images
+
+            data.forEach(image => {
+                let imgDiv = document.createElement('div');
+                imgDiv.style.position = 'relative';
+                imgDiv.style.display = 'inline-block';
+                imgDiv.style.margin = '0px';
+
+                imgDiv.innerHTML = `
+                    <div style="position: relative; display: inline-block;">
+                        <img src="${image.image}" style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; margin: 10px 10px 0 0; ">
+                        <button onclick="deleteImage(${image.id})"
+                            style="position: absolute; top: 15px; right: 15px; width:30px; height: 30px;
+                            background: rgba(0, 0, 0, 0.7); color: white; border: none;
+                            padding: 5px; border-radius: 50%; cursor: pointer;
+                            display: none;">
+                            <i style="color:rgba(255, 255, 255);" class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+
+                // Show delete button on hover
+                let imgElement = imgDiv.querySelector('img');
+                let deleteButton = imgDiv.querySelector('button');
+
+                imgElement.addEventListener('mouseover', () => {
+                    deleteButton.style.display = 'block';
+                });
+
+                imgDiv.addEventListener('mouseleave', () => {
+                    deleteButton.style.display = 'none';
+                });
+
+                container.appendChild(imgDiv);
+            });
+        });
+}
+
+
+        function deleteImage(id) {
+            fetch(`/delete-photo/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => response.json()).then(data => {
+                if (data.success) {
+                    loadImages(); // Reload images after deletion
+                }
+            });
+        }
+
+        // Load images when the page loads
+        loadImages();
+    </script>
+@endpush

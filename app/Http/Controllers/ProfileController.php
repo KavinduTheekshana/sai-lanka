@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profile;
+use App\Models\ProfileImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -47,6 +49,43 @@ class ProfileController extends Controller
         );
 
         return redirect()->back()->with('success', 'Profile updated successfully');
+    }
+
+    public function upload(Request $request)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg',
+        ]);
+
+        $file = $request->file('image');
+        $fileName = time() . '.' . $file->getClientOriginalExtension();
+        $path = $file->storeAs('uploads', $fileName, 'public');
+
+        $photo = ProfileImage::create([
+            'user_id' => auth()->id(),
+            'image' => asset('storage/' . $path),
+        ]);
+
+        return response()->json(['message' => 'File uploaded successfully!', 'photo' => $photo]);
+    }
+
+    public function getPhotos()
+    {
+        $photos = ProfileImage::where('user_id', auth()->id())->get();
+        return response()->json($photos);
+    }
+
+    public function deletePhoto($id)
+    {
+        $photo = ProfileImage::findOrFail($id);
+
+        // Delete from storage
+        $imagePath = str_replace(asset('storage/'), '', $photo->image);
+        Storage::disk('public')->delete('uploads/' . $imagePath);
+
+        $photo->delete();
+
+        return response()->json(['success' => true, 'message' => 'Image deleted successfully']);
     }
 
 }

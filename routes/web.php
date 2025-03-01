@@ -23,4 +23,12 @@ Route::middleware([
     // })->name('dashboard');
     Route::get('/dashboard', [DashboardController::class, 'profile'])->name('dashboard');
     Route::post('/profile', [ProfileController::class, 'store'])->name('profile.store');
+    Route::post('/upload-photo', [ProfileController::class, 'upload']);
+    Route::get('/get-photos', [ProfileController::class, 'getPhotos']);
+    Route::delete('/delete-photo/{id}', [ProfileController::class, 'deletePhoto']);
 });
+
+Route::get('/logout', function () {
+    auth()->logout();
+    return redirect('/');
+})->name('logout');

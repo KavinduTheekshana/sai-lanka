@@ -42,3 +42,28 @@
     background-size: 100% auto; /* Full width, automatic height */
     background-repeat: no-repeat;
 }
+.upload-btn {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+.upload-btn-wrapper {
+    width: 200px !important;
+    height: 200px !important;
+    background-color: #e60d4e32 !important;
+    border: 1px dashed #e60d4e !important;
+    border-radius: 10px !important;
+    display: flex;
+    justify-content: center;
+}
+.upload-btn-content {
+    color: #e60d4e !important;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+.upload-btn-content p {
+    color: #e60d4e !important;
+}

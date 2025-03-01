@@ -7,8 +7,7 @@
                 </a>
             </div>
             <div class="footer-content text-center">
-                <p>This theme extends default WordPress profiles. User can edit profile fields, upload photos, add
-                    favorites, view gifts and read messages, edit privacy settings without even seeing .
+                <p>Dedicated to serving you with trust, reliability, and round-the-clock support. Your satisfaction is our priority. Let's grow together!
                 </p>
                 <ul class="media-icon">
                     <li><a href="javascript:;"><i class="fab fa-facebook-f"></i></a></li>
@@ -17,7 +16,7 @@
                 </ul>
             </div>
             <div class="bootem-footer">
-                <p>© Copyright {{ date('Y') }} by <span>Route One</span> - Design by <a href="https://codexer.co.uk">Codexer</a>.
+                <p>© Copyright {{ date('Y') }} by <span>Sai Lanka Bliss</span> - Design by <a href="https://codexer.co.uk">Codexer</a>.
                 </p>
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>

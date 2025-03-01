@@ -10,6 +10,7 @@
     <meta name="author" content="" />
     <meta name="MobileOptimized" content="320" />
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="{{ asset('frontend/css/fonts.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/animate.css') }}">
@@ -52,6 +53,7 @@
     <script src="{{ asset('frontend/AnimTrap/js/anim-effect.js') }}"></script>
     <script src="{{ asset('frontend/AnimTrap/js/anim-scroll.js') }}"></script>
     <script src="{{ asset('frontend/js/custom.js') }}"></script>
+    @stack('scripts')
     <script>
         var tpj = jQuery;
         var revapi1078;
