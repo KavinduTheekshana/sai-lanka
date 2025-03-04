@@ -13,4 +13,9 @@ class DashboardController extends Controller
         $profile = Profile::where('user_id', Auth::id())->first();
         return view('frontend.dashboard.profile', compact('profile'));
     }
+
+    public function account()
+    {
+        return view('frontend.dashboard.account');
+    }
 }

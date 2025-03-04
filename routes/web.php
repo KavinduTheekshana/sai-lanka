@@ -22,6 +22,7 @@ Route::middleware([
     //     return view('dashboard');
     // })->name('dashboard');
     Route::get('/dashboard', [DashboardController::class, 'profile'])->name('dashboard');
+    Route::get('/account', [DashboardController::class, 'account'])->name('account');
     Route::post('/profile', [ProfileController::class, 'store'])->name('profile.store');
     Route::post('/upload-photo', [ProfileController::class, 'upload']);
     Route::get('/get-photos', [ProfileController::class, 'getPhotos']);
