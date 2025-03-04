@@ -16,14 +16,14 @@
     <meta property="og:description" content="@yield('meta_description', 'Find meaningful connections with Sai Lanka Bliss, the exclusive dating platform where love begins. Discover, connect, and build lasting relationships with ease.')">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sailankabliss.com">
-    <meta property="og:image" content="@yield('ogimage', asset('frontend/images/sai lanka bilss.jpg'))">
+    <meta property="og:image" content="@yield('ogimage', asset('frontend/images/saiog.jpg'))">
     <meta property="og:site_name" content="Sai Lanka Bliss">
 
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('title', 'Sai Lanka Bliss | Connect, Love & Cherish Every Moment!')">
     <meta name="twitter:description" content="@yield('meta_description', 'Find meaningful connections with Sai Lanka Bliss, the exclusive dating platform where love begins. Discover, connect, and build lasting relationships with ease.')">
-    <meta name="twitter:image" content="@yield('ogimage', asset('frontend/images/sai lanka bilss.jpg'))">
+    <meta name="twitter:image" content="@yield('ogimage', asset('frontend/images/saiog.jpg'))">
 
 
     <!-- favicon -->
