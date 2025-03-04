@@ -44,7 +44,7 @@
                             <button class="main-btn" type="submit">Sing Up</button>
                         </div>
                     </form>
-                    <p>Already A member? <a href="login.html">login</a> </p>
+                    <p>Already A member? <a href="{{route("login")}}">login</a> </p>
                 </div>
             </div>
         </div>

@@ -3,13 +3,31 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Sai Lanka Bliss</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="description" content="Sai Lanka Bliss" />
-    <meta name="keywords" content="Sai Lanka Bliss" />
-    <meta name="author" content="" />
-    <meta name="MobileOptimized" content="320" />
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>@yield('title', "Sai Lanka Bliss | Connect, Love & Cherish Every Moment!")</title>
+    <meta name="description" content="@yield('meta_description', 'Find meaningful connections with Sai Lanka Bliss, the exclusive dating platform where love begins. Discover, connect, and build lasting relationships with ease.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'dating site, Sri Lanka dating, online dating, find love, meaningful connections, Sai Lanka Bliss, matchmaking, relationship, meet singles, secure dating platform')">
+
+    <meta name="title" content="@yield('title', 'Sai Lanka Bliss | Connect, Love & Cherish Every Moment!')">
+    <link rel="canonical" href="https://sailankabliss.com" />
+    <meta name="author" content="www.sailankabliss.com">
+
+    <meta property="og:title" content="@yield('title', 'Sai Lanka Bliss | Connect, Love & Cherish Every Moment!')" />
+    <meta property="og:description" content="@yield('meta_description', 'Find meaningful connections with Sai Lanka Bliss, the exclusive dating platform where love begins. Discover, connect, and build lasting relationships with ease.')">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sailankabliss.com">
+    <meta property="og:image" content="@yield('ogimage', asset('frontend/images/sai lanka bilss.jpg'))">
+    <meta property="og:site_name" content="Sai Lanka Bliss">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title', 'Sai Lanka Bliss | Connect, Love & Cherish Every Moment!')">
+    <meta name="twitter:description" content="@yield('meta_description', 'Find meaningful connections with Sai Lanka Bliss, the exclusive dating platform where love begins. Discover, connect, and build lasting relationships with ease.')">
+    <meta name="twitter:image" content="@yield('ogimage', asset('frontend/images/sai lanka bilss.jpg'))">
+
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('frontend/images/favicon.svg') }}">
 
     <link rel="stylesheet" href="{{ asset('frontend/css/fonts.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/font-awesome.css') }}">
@@ -21,7 +39,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom.css') }}">
-    @vite(['', 'resources/js/app.js'])
+    {{-- @vite(['', 'resources/js/app.js']) --}}
 </head>
 
 <body>

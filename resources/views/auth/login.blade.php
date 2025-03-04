@@ -32,7 +32,7 @@
                             <button class="main-btn" type="submit">Log In</button>
                         </div>
                     </form>
-                    <p>New member? <a href="sing-up.html">singup</a> </p>
+                    <p>New member? <a href="{{route("register")}}">singup</a> </p>
                 </div>
             </div>
         </div>

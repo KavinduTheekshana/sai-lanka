@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-
+@section('title', "Account | Sai Lanka Bliss")
 @section('content')
     @include('frontend.components.dashboard-inner')
 

@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-
+@section('title', "About Sai Lanka Bliss | Connect, Love & Cherish Every Moment!")
 @section('content')
 
 <div class="main-innerpage w-100 float-start">
