@@ -27,6 +27,8 @@ Route::middleware([
     Route::post('/upload-photo', [ProfileController::class, 'upload']);
     Route::get('/get-photos', [ProfileController::class, 'getPhotos']);
     Route::delete('/delete-photo/{id}', [ProfileController::class, 'deletePhoto']);
+    Route::post('/update-name', [HomeController::class, 'updateName'])->name('update.name');
+    Route::post('/update-password', [HomeController::class, 'updatePassword'])->name('update.password');
 });
 
 Route::get('/logout', function () {
