@@ -28,7 +28,7 @@ class Profile extends Model
         'job_description',
     ];
 
-    public function images(): HasMany
+    public function profileImages(): HasMany
     {
         return $this->hasMany(ProfileImage::class, 'user_id', 'user_id');
     }

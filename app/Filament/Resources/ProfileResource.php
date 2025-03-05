@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProfileResource\Pages;
 use App\Filament\Resources\ProfileResource\RelationManagers;
+use App\Filament\Resources\ProfileResource\RelationManagers\ProfileImagesRelationManager;
 use App\Models\Profile;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -17,6 +18,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Resources\Pages\ViewRecord;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Actions\Action;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ProfileResource extends Resource
@@ -28,24 +30,24 @@ class ProfileResource extends Resource
     public static function form(Forms\Form $form): Forms\Form
     {
         return $form->schema([
-            Section::make('Profile Details')
+            Forms\Components\Section::make('Profile Details')
                 ->schema([
-                    TextInput::make('profile_name')->required(),
-                    TextInput::make('email')->email()->unique(ignoreRecord: true),
-                    TextInput::make('country'),
-                    TextInput::make('city'),
-                    TextInput::make('occupation'),
-                    TextInput::make('status'),
-                    TextInput::make('birthplace'),
-                    TextInput::make('job_title'),
-                    TextInput::make('job_year_started')->numeric(),
-                    TextInput::make('job_year_end')->numeric(),
+                    Forms\Components\TextInput::make('profile_name')->required(),
+                    Forms\Components\TextInput::make('email')->email()->unique(ignoreRecord: true),
+                    Forms\Components\TextInput::make('country'),
+                    Forms\Components\TextInput::make('city'),
+                    Forms\Components\TextInput::make('occupation'),
+                    Forms\Components\TextInput::make('status'),
+                    Forms\Components\TextInput::make('birthplace'),
+                    Forms\Components\TextInput::make('job_title'),
+                    Forms\Components\TextInput::make('job_year_started')->numeric(),
+                    Forms\Components\TextInput::make('job_year_end')->numeric(),
                 ])
                 ->columns(2),
         ]);
     }
 
-    public static function table(Table $table): Table
+    public static function table(Tables\Table $table): Tables\Table
     {
         return $table
             ->columns([
@@ -53,7 +55,7 @@ class ProfileResource extends Resource
                     ->label('Name')
                     ->sortable()
                     ->searchable()
-                    ->toggleable(), // Allows users to show/hide this column
+                    ->toggleable(),
 
                 TextColumn::make('email')
                     ->sortable()
@@ -75,7 +77,26 @@ class ProfileResource extends Resource
                     ->toggleable(),
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(), // View button to see full details
+                Tables\Actions\ViewAction::make(),
+                Action::make('viewImages')
+                ->label('View Images')
+                ->icon('heroicon-o-photo')
+                ->modalHeading('User Images')
+                ->modalContent(function ($record) {
+                    $images = $record->profileImages;
+                    return view('filament.tables.modals.view-images', [
+                        'images' => $images,
+                    ]);
+                })
+                ->modalWidth('4xl')
+                ->modalCloseButton(false)
+                ->modalActions([
+                    // Add a close button
+                    Action::make('close')
+                        ->label('Close')
+                        ->color('secondary')
+                        ->close(),
+                ]),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('country')->label('Country')->options(
@@ -87,7 +108,7 @@ class ProfileResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ProfileImagesRelationManager::class,
         ];
     }
 
@@ -98,6 +119,10 @@ class ProfileResource extends Resource
             'create' => Pages\CreateProfile::route('/create'),
             'edit' => Pages\EditProfile::route('/{record}/edit'),
         ];
+    }
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->with('profileImages');
     }
 }
 class ViewProfile extends ViewRecord
