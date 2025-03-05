@@ -30,6 +30,6 @@ class Profile extends Model
 
     public function images(): HasMany
     {
-        return $this->hasMany(ProfileImage::class);
+        return $this->hasMany(ProfileImage::class, 'user_id', 'user_id');
     }
 }
