@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Profile extends Model
 {
@@ -26,4 +27,9 @@ class Profile extends Model
         'job_year_end',
         'job_description',
     ];
+
+    public function images(): HasMany
+    {
+        return $this->hasMany(ProfileImage::class);
+    }
 }

@@ -136,7 +136,7 @@
                             h_offset: 0,
                             v_offset: 30,
                             space: 5,
-                            tmp: '<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span><span class="tp-bullet-title">fdg</span>'
+                            tmp: '<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span>'
                         }
                     },
                     viewPort: {

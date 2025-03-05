@@ -7,7 +7,6 @@
         <div class="container">
             <div class="row">
                 @include('frontend.components.dashboard-sidebar')
-
                 <div class="col-lg-8 col-md-12 col-12">
                     <div class="my-profile">
                         <div class="heading">
@@ -18,7 +17,6 @@
                         </div>
 
                         @include('frontend.components.alert')
-
 
                         <form action="{{ route('update.name') }}" method="POST">
                             @csrf
