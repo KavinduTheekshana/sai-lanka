@@ -46,7 +46,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/AnimTrap/css/animtrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/custom.css') }}">
-    @vite(['', 'resources/js/app.js'])
+    {{-- @vite(['', 'resources/js/app.js']) --}}
 </head>
 
 <body>
